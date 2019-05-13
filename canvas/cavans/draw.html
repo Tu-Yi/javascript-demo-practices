@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no,maximum-scale=1.0,minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <script src="//at.alicdn.com/t/font_1149387_6j51z4lmiji.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="actions" class="actions">
+        <svg class="icon active" id="brush">
+            <use xlink:href="#icon-pencil"></use>
+        </svg>
+        <svg class="icon" id="eraser">
+            <use xlink:href="#icon-Eraser-Tool"></use>
+        </svg>
+        <svg class="icon" id="clear">
+            <use xlink:href="#icon-Eliminate"></use>
+        </svg>
+        <svg class="icon" id="save">
+            <use xlink:href="#icon-xiazaibaocun"></use>
+        </svg>
+        <div class="lineWidth">
+            <input class="range" id="range" type="range" name="points" min="1" max="10" value="3" step="1" oninput="rangeChange()" onchange="rangeChange()" />
+            <span id="rangeValue">3</span>
+        </div>
+    </div>
+    <ul class="color" id="color">
+        <li class="black" id="black"></li>
+        <li class="red" id="red"></li>
+        <li class="blue" id="blue"></li>
+        <li class="green" id="green"></li>
+        <li class="yellow" id="yellow"></li>
+        <li class="gray" id="gray"></li>
+        <li class="purple" id="purple"></li>
+        <li class="orange" id="orange"></li>
+        <li class="pink" id="pink"></li>
+    </ul>
+    <canvas id="ca"></canvas>
+
+</body>
+</html>
