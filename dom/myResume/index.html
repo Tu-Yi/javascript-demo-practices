@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的简历</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="//at.alicdn.com/t/font_1084419_esu3kng89gk.js"></script>
+    <style>
+        .loading {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+        .loading::before,.loading::after {
+            content: '';
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            background: #000000;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            animation: s 1.5s linear infinite;
+        }
+        .loading::after {
+            animation-delay: 0.75s;
+        }
+        @keyframes s {
+            0%{
+                width: 0px;height: 0px;opacity: 1;
+            }
+            100%{
+                width: 100px;height: 100px;opacity: 0;
+            }
+        }
+        .wait {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+        }
+        .wait.active {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="wait" class="wait active">
+        <div class="loading"></div>
+    </div> -->
+    <header id="header" class="clearfix">
+        <p>
+            <span>RS</span><span>card</span>
+        </p>
+        <nav>
+            <ul>
+                <li><a data-a href="#about">关于</a></li>
+                <li><a data-a href="#skills">技能</a></li>
+                <li class="menuTrigger">
+                    <a data-a href="#portfolio">案例</a>
+                    <ul class="submenu">
+                        <li>作品1</li>
+                        <li>作品2</li>
+                        <li>作品3</li>
+                    </ul>
+                </li>
+                <li><a href="#">工作经历</a></li>
+                <li><a href="#">教育经历</a></li>
+                <li class="menuTrigger">
+                    <a href="#">博客</a>
+                    <ul class="submenu">
+                        <li>博客1</li>
+                        <li>博客2</li>
+                        <li>博客3</li>
+                    </ul>
+                </li>
+                <li><a href="#">爱好</a></li>
+                <li><a href="#">联系我</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="banner">
+        <div class="shade">
+        </div>
+    </div>
+    <main>
+        <section data-x id="#about" class="userCard">
+            <div class="profile clearfix">
+                <div class="profile-photo">
+                    <img src="./images/photo.jpg" alt="that`s me">
+                </div>
+                <div class="profile-info">
+                    <p class="welcome">hello</p>
+                    <p class="name">袁 琨</p>
+                    <p>渴望成长，保持热情，享受技术的乐趣</p>
+                    <hr/>
+                    <ul>
+                        <li><strong>年龄</strong><span>29</span></li>
+                        <li><strong>地址</strong><span>四川成都高新区天府软件园</span></li>
+                        <li><strong>邮箱</strong><span>yk_niliv@qq.com</span></li>
+                        <li><strong>电话</strong><span>1399999999</span></li>
+                        <li><strong>性别</strong><span>保密</span> </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="profile-social">
+                <a href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+                </a>
+                <a href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-icontwtter"></use>
+                </svg>
+                </a>
+                <a href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-google"></use>
+                </svg>
+                </a>
+                <a href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-zhihu"></use>
+                </svg>
+                </a>
+                <a href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-yanzheng-jianshu"></use>
+                </svg>
+                </a>
+                <a href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-csdn"></use>
+                </svg>
+                </a>
+            </div>
+        </section>
+        <section class="intro">
+            <a href="./docs/resume.pdf" download>DOWNLOAD RESUME</a>
+            <p>嗨！我是袁琨。程序员、全栈开发工程师、产品经理、项目经理。多年从事软件领域的开发、设计、管理工作，具有WEB系统、大数据、云计算等相关技术领域的项目和产品经验。先后有政府、外包、房地产、旅游等行业的软件开发及设计经验。在交互设计、产品设计、项目管理、前后端开发、大数据、测试、运维等范围具有比较深的造诣。</p>
+        </section>
+        <section data-x id="#skills" class="skills">
+            <p>专业技能</p>
+            <div class="article">
+                <ul class="clearfix">
+                    <li>
+                        <span class="title">Java & Spring</span>
+                        <div class="wrapper">
+                            <div class="inner"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="title">Javascript & VUE</span>
+                        <div class="wrapper">
+                            <div class="inner"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="title">HTML5 & CSS3</span>
+                        <div class="wrapper">
+                            <div class="inner"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="title">MySql & Oracle</span>
+                        <div class="wrapper">
+                            <div class="inner"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="title">Axure & MockingBot & PhotoShop</span>
+                        <div class="wrapper">
+                            <div class="inner"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="title">Scrum & JIRA</span>
+                        <div class="wrapper">
+                            <div class="inner"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section data-x id="#portfolio" class="portfolio">
+            <p>Portfolio</p>
+            <nav>
+                <ul>
+                    <li id="portfolioAll">所有</li>
+                    <li id="portfolioWeb">WEB</li>
+                    <li id="portfolioApp">APP</li>
+                </ul>
+                <div class="bar">
+                    <div id="progress" class="progress state-1"></div>
+                </div>
+            </nav>
+            <div class="content">
+                <div class="big">
+                    <img src="./images/works_1.jpg" alt="项目1">
+                </div>
+                <div class="small">
+                    <img src="./images/works_2.jpg" alt="项目2">
+                </div>
+                <div class="small">
+                    <img src="./images/works_3.jpg" alt="项目3">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.3.0/Tween.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
