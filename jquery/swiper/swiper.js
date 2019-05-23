@@ -29,7 +29,7 @@ function setTimer(){
     return setInterval(() => {
         n+=1;
         playSide(n % size)
-    }, 1000);
+    }, 2000);
 }
 function playSide(index){
     allButtons.eq(index).trigger('click')
