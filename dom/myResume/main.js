@@ -63,21 +63,6 @@ for(let i=0;i<aTags.length;i++){
         let element = document.getElementById(href)
         let top = element.offsetTop;
 
-        // let n=25;
-        // let duration = 500 / n;
-        // let currentTop = window.scrollY
-        // let targetTop = top - 80
-        // let distance = (targetTop - currentTop) / n
-        // let i = 0;
-        // let id = setInterval(() => {
-        //     if(i===n){
-        //         window.clearInterval(id);
-        //         return;
-        //     }
-        //     i = i+1;
-        //     window.scrollTo(0,currentTop + distance * i)
-        // }, duration);
-
         let currentTop = window.scrollY
         let targetTop = top - 80
         let distance = targetTop - currentTop

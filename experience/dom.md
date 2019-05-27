@@ -200,3 +200,5 @@
   }
 ```
 
+### 鼠标滚动，缓动，下拉菜单，导航联动，内容动画
+[myResume](../dom/myResume/main.js)
