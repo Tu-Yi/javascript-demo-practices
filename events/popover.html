@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>popover</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+    .wrapper {
+      position: relative;
+      width: 50px;
+      margin: 50px auto;
+    }
+
+    #clickMe {
+      padding: 20px;
+      white-space: nowrap;
+    }
+
+    .popover {
+      position: absolute;
+      border: 1px solid red;
+      padding: 60px;
+      left: 100%;
+      top: 0;
+      white-space: nowrap;
+      margin-left: 40px;
+      display: none;
+    }
+
+    .popover::before {
+      position: absolute;
+      right: 100%;
+      top: -1px;
+      border: 10px solid transparent;
+      border-right-color: red;
+      content: '';
+    }
+
+    .popover::after {
+      position: absolute;
+      right: 100%;
+      top: -1px;
+      content: '';
+      border: 10px solid transparent;
+      border-right-color: white;
+      margin-right: -1px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper" class="wrapper">
+    <button id="clickMe">点我</button>
+    <div id="popover" class="popover">
+      我是浮云
+    </div>
+  </div>
+  <script>
+    /* $(clickMe).on('click', function (e) {
+      $(popover).show();
+      setTimeout(() => {
+        $(document).one('click', function (e) {
+          $(popover).hide();
+        })
+      }, 0);
+    }) */
+
+    $(clickMe).on('click', function (e) {
+      if ($(popover).is(":hidden")) {
+        $(popover).show();
+      } else {
+        $(popover).hide();
+      }
+      $(document).one('click', function (e) {
+        $(popover).hide();
+      })
+    })
+    $(wrapper).on('click', function (e) {
+      e.stopPropagation();
+    })
+  </script>
+</body>
+
+</html>
